@@ -213,14 +213,26 @@ $title-color: #96979c;
   display: flex;
   flex-direction: column;
   &__title {
-    font-size: 40px;
+    font-size: 55px;
     font-weight: 500;
     color: $title-color;
     text-align: center;
   }
 }
 .header {
-  padding: 0 15px;
+  padding: 0 15px 40px 15px;
+  margin: 0 60px 0 60px;
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background: rgb(0,0,0);
+background: linear-gradient(90deg, rgba(0,0,0,0.06206232492997199) 0%, rgba(143,143,143,1) 50%, rgba(0,0,0,0.05085784313725494) 100%);
+  }
 }
 .dialog {
   padding: 5px;
