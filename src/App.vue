@@ -182,22 +182,23 @@
     </main>
     <footer class="footer">
       <div class="footer__buttons">
-        <button
-          class=""
-          type="button">
-          Decline
-        </button>
-        <button
-          class=""
-          type="button">
-          Accept
-        </button>
+        <button @click="onDecline" type="button">Decline</button>
+        <button @click="onAccept" type="button">Accept</button>
       </div>
     </footer>
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+
+function onDecline() {
+  console.log('Decline');
+}
+
+function onAccept() {
+  console.log('Accept');
+}
+</script>
 
 <style lang="scss">
 $main-bg: #3f4249;
@@ -230,8 +231,13 @@ $title-color: #96979c;
     height: 1px;
     bottom: 0;
     left: 0;
-    background: rgb(0,0,0);
-background: linear-gradient(90deg, rgba(0,0,0,0.06206232492997199) 0%, rgba(143,143,143,1) 50%, rgba(0,0,0,0.05085784313725494) 100%);
+    background: rgb(0, 0, 0);
+    background: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.06206232492997199) 0%,
+      rgba(143, 143, 143, 1) 50%,
+      rgba(0, 0, 0, 0.05085784313725494) 100%
+    );
   }
 }
 .dialog {
